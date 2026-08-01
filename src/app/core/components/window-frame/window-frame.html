@@ -1,13 +1,47 @@
-<div class="window-frame" [class.maximized]="windowData.isMaximized" [style.zIndex]="windowData.zIndex" [style.transform]="windowData.isMaximized ? 'none !important' : null" (mousedown)="focus()" cdkDrag [cdkDragDisabled]="windowData.isMaximized">
+<div
+  class="window-frame"
+  [class.maximized]="windowData.isMaximized"
+  [style.zIndex]="windowData.zIndex"
+  [style.transform]="windowData.isMaximized ? 'none !important' : null"
+  (mousedown)="focus()"
+  cdkDrag
+  [cdkDragDisabled]="windowData.isMaximized"
+>
   <div class="window-header" cdkDragHandle>
     <span class="window-title">{{ windowData.title }}</span>
+
     <div class="window-controls">
+
       <!-- Botão Maximizar / Restaurar -->
-      <button type="button" class="control-btn maximize" (click)="toggleMaximize()" aria-label="Maximizar" title="Maximizar">
+      <button
+        type="button"
+        class="control-btn maximize"
+        (click)="toggleMaximize()"
+        aria-label="Maximizar"
+        title="Maximizar"
+      >
+        <img
+          [src]="windowData.isMaximized
+            ? 'iconeWin/VolumeDOWN.png'
+            : 'iconeWin/VolumeUP.png'"
+          alt=""
+        >
       </button>
 
-      <button type="button" class="control-btn close" (click)="close()" aria-label="Fechar" title="Fechar">
+      <!-- Botão Fechar -->
+      <button
+        type="button"
+        class="control-btn close"
+        (click)="close()"
+        aria-label="Fechar"
+        title="Fechar"
+      >
+        <img
+          src="iconeWin/Exit.png"
+          alt=""
+        >
       </button>
+
     </div>
   </div>
 
