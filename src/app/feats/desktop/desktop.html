@@ -1,0 +1,17 @@
+<div class="desktop-container">
+  <!-- Área de trabalho onde as janelas flutuam -->
+  <main class="desktop-area">
+    @for (win of windowService.windows(); track win.id) {
+      <app-window-frame [windowData]="win"></app-window-frame>
+    }
+  </main>
+<section>
+  <img src="/img/nyx-metal2.png" alt="nyx e metal">
+  
+</section>
+
+  <app-taskbar></app-taskbar>
+</div>
+
+
+

@@ -1,0 +1,17 @@
+<div class="window-frame" [class.maximized]="windowData.isMaximized" [style.zIndex]="windowData.zIndex" [style.transform]="windowData.isMaximized ? 'none !important' : null" (mousedown)="focus()" cdkDrag [cdkDragDisabled]="windowData.isMaximized">
+  <div class="window-header" cdkDragHandle>
+    <span class="window-title">{{ windowData.title }}</span>
+    <div class="window-controls">
+      <!-- Botão Maximizar / Restaurar -->
+      <button type="button" class="control-btn maximize" (click)="toggleMaximize()" aria-label="Maximizar" title="Maximizar">
+      </button>
+
+      <button type="button" class="control-btn close" (click)="close()" aria-label="Fechar" title="Fechar">
+      </button>
+    </div>
+  </div>
+
+  <div class="window-body">
+    <ng-container *ngComponentOutlet="windowData.component"></ng-container>
+  </div>
+</div>

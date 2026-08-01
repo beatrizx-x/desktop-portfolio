@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  padding: 24px 50px ;
+  
+}
+nav button {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+ button:hover {
+  transform: translateY(-2px) scale(1.03);
+ 
+}
+nav button:active {
+  transform: translateY(-2px) scale(0.95);
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 12px;          
+    padding: 8px 16px;    
+    bottom: 12px;       
+    max-width: 90vw;     
+  }
+
+  nav button img {
+    width: 36px;         
+    height: 36px;
+  }
+}
