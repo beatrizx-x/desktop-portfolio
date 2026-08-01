@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './spotify.html',
   styleUrl: './spotify.css',
 })
-export class Spotify {}
+export class Spotify {
+  
+
+}

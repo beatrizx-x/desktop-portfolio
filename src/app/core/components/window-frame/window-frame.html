@@ -2,7 +2,6 @@
   class="window-frame"
   [class.maximized]="windowData.isMaximized"
   [style.zIndex]="windowData.zIndex"
-  [style.transform]="windowData.isMaximized ? 'none !important' : null"
   (mousedown)="focus()"
   cdkDrag
   [cdkDragDisabled]="windowData.isMaximized"
@@ -22,7 +21,7 @@
       >
         <img
           [src]="windowData.isMaximized
-            ? 'assets/iconeWin/Exit.png'
+            ? 'assets/iconeWin/VolumeDOWN.png'
             : 'assets/iconeWin/VolumeUP.png'"
           alt=""
         >
@@ -46,6 +45,7 @@
   </div>
 
   <div class="window-body">
+  <div class="window-content">
     <ng-container *ngComponentOutlet="windowData.component"></ng-container>
   </div>
 </div>
