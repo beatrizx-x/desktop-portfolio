@@ -7,12 +7,13 @@
 
   overflow: hidden;
 
-    background-image: url('/assets/img/nyx-metal2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-
+.wallpaper{
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
 .desktop-icons {
   position: absolute;
   top: 20px;
