@@ -9,6 +9,7 @@ import { Calendario } from '../../feats/calendario/calendario';
 import { Mensagem } from '../../feats/mensagem/mensagem';
 import { Projetos } from '../../feats/projetos/projetos';
 import { Contato } from '../../feats/contato/contato';
+import { TrilhaSonora } from '../../feats/trilha-sonora/trilha-sonora';
 
 @Component({
   selector: 'app-taskbar',
@@ -46,5 +47,8 @@ export class Taskbar {
 
   openContato() {
     this.windowService.openWindow('contato', 'Contato', Contato);
+  }
+  opentrilhasonora() {
+    this.windowService.openWindow('trilha-sonora', 'Trilha Sonora', TrilhaSonora);
   }
 }
