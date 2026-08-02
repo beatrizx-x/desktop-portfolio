@@ -1,17 +1,62 @@
-<div class="desktop-container">
-  <!-- Área de trabalho onde as janelas flutuam -->
-  <main class="desktop-area">
+<section class="desktop-background">
+
+  <div class="desktop-container">
+
+    <div class="desktop-icons">
+
+      <div class="desktop-icon">
+        <img src="assets/iconeWin/github3.png" alt="Projetos">
+        <span>Projetos</span>
+      </div>
+
+      <div class="desktop-icon">
+        <img src="assets/icons/Icons - icones/my puter.png" alt="Sobre">
+        <span>Sobre Mim</span>
+      </div>
+
+      <div class="desktop-icon">
+        <img src="assets/iconeWin/contato3.png" alt="Contato">
+        <span>Contato</span>
+      </div>
+
+      <div class="desktop-icon">
+        <img src="assets/iconeWin/calendario.png" alt="Calendário">
+        <span>Calendário</span>
+      </div>
+
+      <div class="desktop-icon">
+        <img src="assets/icons/Icons - icones/games-02.png" alt="Game">
+        <span>Game</span>
+      </div>
+
+      <div class="desktop-icon" (dblclick)="openSpotify()">
+        <img src="assets/icons/Icons - icones/music-01.png" alt="Spotify">
+        <span>Spotify</span>
+      </div>
+
+      <div class="desktop-icon" (dblclick)="openYoutubeMusic()">
+        <img src="assets/iconeWin/yt.png" alt="YouTube Music">
+        <span>Trilha Sonora</span>
+      </div>
+
+      <div class="desktop-icon" (dblclick)="openMensagem()">
+        <img src="/assets/icons/Icons - icones/mail-01.png" alt="Mensagem">
+        <span>Mensagem</span>
+      </div>
+
+    </div>
+
+    <!-- AQUI AS JANELAS SÃO RENDERIZADAS -->
     @for (win of windowService.windows(); track win.id) {
-      <app-window-frame [windowData]="win"></app-window-frame>
+
+    <app-window-frame [windowData]="win">
+    </app-window-frame>
+
     }
-  </main>
-<section>
-  <img src="assets/img/nyx-metal2.png" alt="nyx e metal">
-  
+
+    <!-- TASKBAR -->
+    <app-taskbar></app-taskbar>
+
+  </div>
+
 </section>
-
-  <app-taskbar></app-taskbar>
-</div>
-
-
-

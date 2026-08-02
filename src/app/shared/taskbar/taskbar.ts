@@ -25,9 +25,14 @@ export class Taskbar {
     this.windowService.openWindow('sobre', 'Sobre Mim', Sobre);
   }
 
-  openSpotify() {
-    this.windowService.openWindow('spotify', 'Música', Spotify);
-  }
+ openSpotify() {
+  this.windowService.openWindow(
+    'spotify',
+    'Música',
+    Spotify
+  );
+
+}
 
   openGame() {
     this.windowService.openWindow('game', 'Jogos', Game);
@@ -51,4 +56,6 @@ export class Taskbar {
   opentrilhasonora() {
     this.windowService.openWindow('trilha-sonora', 'Trilha Sonora', TrilhaSonora);
   }
+ 
+  
 }
